@@ -47,7 +47,7 @@ public class DBCWindow : EditorWindow {
             _logo = (Texture)EditorGUIUtility.Load("Assets/Nara/DynBoneConstraints/logo.png");
 
         GUILayout.Label(_logo);
-        EditorGUILayout.Space(16);
+        UIUtils.Space(16);
 
         // [GUI] Constraint source options
         _constraintSource = (GameObject)EditorGUILayout.ObjectField($"Constraint source root", _constraintSource, typeof(GameObject), true);
@@ -62,7 +62,7 @@ public class DBCWindow : EditorWindow {
 
         _rootName = _constraintSource ? Regex.Match(_constraintSource.name, @"^(.*?)_?\d*$").Groups[1].Value : "";
 
-        EditorGUILayout.Space(16);
+        UIUtils.Space(16);
 
         // [GUI] Constrained objects count
         _constrainedObjCount = EditorGUILayout.IntField("Constrained objects count", _constrainedObjCount);
@@ -72,7 +72,7 @@ public class DBCWindow : EditorWindow {
         }
         
         // [GUI] Constrained objects manual selection
-        _showConstrainedObj = EditorGUILayout.BeginFoldoutHeaderGroup(_showConstrainedObj, "Constrained objects");
+        _showConstrainedObj = UIUtils.BeginFoldoutHeaderGroup(_showConstrainedObj, "Constrained objects");
         if (_showConstrainedObj) {
             EditorGUI.indentLevel++;
 
@@ -89,7 +89,7 @@ public class DBCWindow : EditorWindow {
 
             EditorGUI.indentLevel--;
         }
-        EditorGUILayout.EndFoldoutHeaderGroup();
+        UIUtils.EndFoldoutHeaderGroup();
 
         // [GUI] Constrained objects automatic selection
         EditorGUILayout.BeginHorizontal();
@@ -115,7 +115,7 @@ public class DBCWindow : EditorWindow {
         }
         EditorGUILayout.EndHorizontal();
 
-        EditorGUILayout.Space(24);
+        UIUtils.Space(24);
 
         // [GUI] Generator buttons
         var canMakeConstraints = _constraintSource != null;
@@ -148,10 +148,10 @@ public class DBCWindow : EditorWindow {
                 Selection.activeGameObject = _constraintSource;
             }
 
-        EditorGUILayout.Space(24);
+        UIUtils.Space(24);
 
         // [GUI] Manual generation buttons
-        _showManualButtons = EditorGUILayout.BeginFoldoutHeaderGroup(_showManualButtons, "Manual setup");
+        _showManualButtons = UIUtils.BeginFoldoutHeaderGroup(_showManualButtons, "Manual setup");
         if (_showManualButtons) {
             EditorGUILayout.HelpBox("You probably don't need  any this, unless you really know what you're doing.", MessageType.Info);
             EditorGUI.indentLevel++;
@@ -178,7 +178,7 @@ public class DBCWindow : EditorWindow {
             
             EditorGUI.indentLevel--;
         }
-        EditorGUILayout.EndFoldoutHeaderGroup();
+        UIUtils.EndFoldoutHeaderGroup();
 
         EditorGUILayout.EndScrollView();
     }

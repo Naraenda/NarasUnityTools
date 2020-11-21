@@ -23,8 +23,10 @@ namespace Nara.DBC
             }};
 
             foreach (var sibling in siblings) {
-                var constraint = sibling.GetComponent<RotationConstraint>() 
-                    ?? sibling.AddComponent<RotationConstraint>();
+                var constraint = sibling.GetComponent<RotationConstraint>();
+
+                if (!constraint)
+                    constraint = sibling.AddComponent<RotationConstraint>() as RotationConstraint;
 
                 constraint.constraintActive = false;
                 constraint.SetSources(source);
