@@ -1,7 +1,11 @@
 # Nara's Unity Tools
 
 Place for some of the tools I wrote for Unity.
-Specifically for the creation of performant avatars for VRChat and ChilloutVR.
+Specifically for the creation of (performant) avatars for VRChat and ChilloutVR.
+
+## Installation
+
+Download or clone this project and copy the `Nara` folder into your `Assets` folder in your Unity project.
 
 ## Dynamic Bone Constraints
 
@@ -14,4 +18,3 @@ The tool is pretty simple to use. Select the objects you want to constrain and c
 If you already have a chain of bones you want to bind these objects to, then use that as the `Constraint source root`.
 `Modify source constraint` will modify (and if needed add) children of the root.
 In most cases you can leave the `Constraint source root` empty and just click the magical `Setup constraints` button. [You can have your dynamic bones on your avatar setup in 30 seconds!](https://youtu.be/byvG2FgJEhU)
-
