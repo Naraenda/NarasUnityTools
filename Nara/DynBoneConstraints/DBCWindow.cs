@@ -9,6 +9,7 @@ using UnityEditor;
 using Nara;
 using Nara.DBC;
 
+#if (UNITY_EDITOR)
 [ExecuteInEditMode, CanEditMultipleObjects, System.Serializable]
 public class DBCWindow : EditorWindow {
     static EditorWindow _window;
@@ -201,3 +202,5 @@ public class DBCWindow : EditorWindow {
         }
     }
 }
+
+#endif

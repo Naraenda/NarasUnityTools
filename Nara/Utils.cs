@@ -13,6 +13,7 @@ namespace Nara
             => child.transform.parent.gameObject;
     }
 
+#if (UNITY_EDITOR)
     public static class UIUtils {
         public static bool BeginFoldoutHeaderGroup(bool state, string name) {
             #if UNITY_2018
@@ -40,4 +41,5 @@ namespace Nara
         }
 
     }
+#endif
 }
