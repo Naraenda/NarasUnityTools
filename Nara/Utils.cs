@@ -1,7 +1,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor;
+using UnityEngine.Animations;
 
 namespace Nara
 {
@@ -11,35 +11,22 @@ namespace Nara
 
         public static GameObject Parent(this GameObject child)
             => child.transform.parent.gameObject;
+
+        public static void Activate(this RotationConstraint constraint) {
+                constraint.constraintActive = false;
+
+                List<ConstraintSource> sources = new List<ConstraintSource>();
+                constraint.GetSources(sources);
+
+                constraint.rotationAtRest = Vector3.zero;
+                constraint.rotationOffset = Vector3.zero;
+
+                foreach (var source in sources) {
+                    constraint.rotationAtRest = constraint.transform.localRotation.eulerAngles;
+                    constraint.rotationOffset = (Quaternion.Inverse(source.sourceTransform.localRotation) * constraint.transform.rotation).eulerAngles;
+                }
+
+                constraint.constraintActive = true;
+        }
     }
-
-#if (UNITY_EDITOR)
-    public static class UIUtils {
-        public static bool BeginFoldoutHeaderGroup(bool state, string name) {
-            #if UNITY_2018
-                return EditorGUILayout.Foldout(state, name);
-            #endif
-
-            #if UNITY_2019
-                return EditorGUILayout.BeginFoldoutHeaderGroup(state, name);
-            #endif
-        }
-
-        public static void EndFoldoutHeaderGroup() {
-            #if UNITY_2019
-                EditorGUILayout.EndFoldoutHeaderGroup();
-            #endif
-        }
-
-        public static void Space(float spacing) {
-            #if UNITY_2018
-                EditorGUILayout.Space();
-            #endif
-            #if UNITY_2019
-                EditorGUILayout.Space(spacing);
-            #endif
-        }
-
-    }
-#endif
 }

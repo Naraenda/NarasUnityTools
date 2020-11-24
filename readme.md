@@ -11,6 +11,8 @@ Download or clone this project and copy the `Nara` folder into your `Assets` fol
 
 ![Screenshot of DBC](media/screenshot.png)
 
+[**>>> Tutorial <<<**](dbc_tutorial.md)
+
 Instead of having 50 dynamic bone transformations hogging up the whole main thread it's better to have just a single chain of dynamic bones and have all other bones be move similarly to the single chain.
 This can be done via rotation constraints which are significantly cheaper to compute and they also can be computed on other threads!
 
