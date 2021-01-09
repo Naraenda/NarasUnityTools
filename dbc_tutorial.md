@@ -2,7 +2,7 @@
 
 ## Step 0: Open the DBC window
 
-Open the Dynamic Bone Constraints tool under the `Nara` catagory in the toolbar on the top.
+Open the Dynamic Bone Constraints tool under the `Window > Nara` (note: this screenshot below outdated) in the toolbar on the top.
 
 ![Open the DBC window under "Nara" in the top toolbar.](media/dbc_tutorial/open_dbc.png)
 
@@ -39,9 +39,10 @@ If it is unchecked, no new children will be generated and only the amount of obj
 For example, you have a constrained object that goes 5 levels deep, but the source only goes 3 deep.
 Only the first 3 levels in the constrained objects will get affected.
 
-## Extra: Fake gravity for quest
+## Extra: Fake gravity
 
-It is possible to fake gravity for long hair for Quest avatar.
+It is possible to fake gravity for long hair for avatar without any dynamic bones.
+(Would be actually great if VRChat would actually allow constraints...)
 It will not behave the same as Dynamic Bones, but it will let hair point downwards.
 It works by cancelling out all rotations of the parent such that it will not rotate even if your avatar does, however it keeps the y rotation of the object so it will always look towards where you looking at.
 

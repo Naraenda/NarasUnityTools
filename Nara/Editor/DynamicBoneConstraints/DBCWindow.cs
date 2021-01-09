@@ -29,8 +29,7 @@ public class DBCWindow : EditorWindow {
     // Generation options
     bool _showManualButtons = false;
 
-
-    [MenuItem("Nara/Dynamic Bone Constraints", false, 0)]
+    [MenuItem("Window/Nara/Dynamic Bone Constraints", false, 900000)]
     public static void ShowWindow() {
         if(!_window) {
             _window  = EditorWindow.GetWindow(typeof(DBCWindow));

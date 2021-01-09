@@ -11,7 +11,7 @@ namespace Nara
 
         public static GameObject Parent(this GameObject child)
             => child.transform.parent.gameObject;
-
+    
         public static void Activate(this RotationConstraint constraint) {
                 constraint.constraintActive = false;
 
