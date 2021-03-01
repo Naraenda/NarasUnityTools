@@ -20,6 +20,10 @@ Right-clicking a dynamic bone component also allows you to quickly set it's root
 
 ![Demo of the right menu contexts](media/context_demo.gif)
 
+## (WIP) Animator Controller Tools
+
+Small window that allows of mass editing of transitions. Still a work in progress and it might break stuff.
+
 ## Dynamic Bone Constraints
 
 [**>>> Tutorial <<<**](dbc_tutorial.md)

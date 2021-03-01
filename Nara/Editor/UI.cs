@@ -46,6 +46,21 @@ namespace Nara.Editor
                 GUILayout.FlexibleSpace();
                 GUILayout.EndHorizontal();
         }
+
+        public static void Divider() {
+            Rect rect = EditorGUILayout.GetControlRect(false, 1);
+
+            rect.height = 1;
+            rect = EditorGUI.IndentedRect(rect);
+
+            EditorGUI.DrawRect(rect, new Color (0.5f,0.5f,0.5f, 1));
+        }
+
+        public static void Divider(float spacing) {
+            UI.Space(spacing);
+            Divider();
+            UI.Space(spacing);
+        }
     }
 
     public static class UIStyles {       

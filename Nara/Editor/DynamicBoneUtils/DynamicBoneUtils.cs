@@ -4,11 +4,10 @@ using UnityEditor;
 using UnityEngine;
 using System.Linq;
 
-[ExecuteInEditMode]
-public class DynamicBoneUtils : EditorWindow
+public class DynamicBoneUtils
 {
-    [MenuItem("CONTEXT/DynamicBone/Set dynamic bone root from this", false, 10)]
-    static void SetRootsFromSelection() {
+    [MenuItem("GameObject/DynamicBone/Set root", false, 0)]
+    static void SetRootsFromSelection(MenuCommand menuCommand) {
         var sel = Selection.gameObjects;
         foreach (var go in sel) {
             var db = go?.GetComponent<DynamicBone>();
@@ -19,17 +18,18 @@ public class DynamicBoneUtils : EditorWindow
         }
     }
 
-    [MenuItem("GameObject/DynamicBone/Filter selection and children", false, 100)]
-    static void FilterOnlyDynamicBoneAndChildren(MenuCommand menuCommand) {
-        Selection.objects = Selection.gameObjects
-            .SelectMany(x => x.GetComponentsInChildren<DynamicBone>())
-            .Select(x => x.gameObject)
-            .ToArray();
-    }
-    [MenuItem("GameObject/DynamicBone/Filter selection", false, 101)]
+    [MenuItem("GameObject/DynamicBone/Filter selection", false, 0)]
     static void FilterOnlyDynamicBone(MenuCommand menuCommand) {
         Selection.objects = Selection
             .GetFiltered<DynamicBone>(SelectionMode.Unfiltered)
+            .Select(x => x.gameObject)
+            .ToArray();
+    }
+
+    [MenuItem("GameObject/DynamicBone/Filter selection (with children)", false, 0)]
+    static void FilterOnlyDynamicBoneAndChildren(MenuCommand menuCommand) {
+        Selection.objects = Selection.gameObjects
+            .SelectMany(x => x.GetComponentsInChildren<DynamicBone>())
             .Select(x => x.gameObject)
             .ToArray();
     }
