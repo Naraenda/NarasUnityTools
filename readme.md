@@ -6,6 +6,7 @@ Specifically for the creation of avatars for VRChat and ChilloutVR.
 ## Installation
 
 Download or clone this project and copy the `Nara` folder into your `Assets` folder in your Unity project.
+`Dynamic Bones` is **required**. I'm too lazy to add a fallback.
 
 ## Hierarchy improvements & context menus
 
@@ -20,9 +21,12 @@ Right-clicking a dynamic bone component also allows you to quickly set it's root
 
 ![Demo of the right menu contexts](media/context_demo.gif)
 
-## (WIP) Animator Controller Tools
+## Animator Tools
 
-Small window that allows of mass editing of transitions. Still a work in progress and it might break stuff.
+Tool that allows the editing of multiple transitions.
+This includes conditions and transition timings. Find  the window in `Window > Nara > Animator Tools`.
+
+![Screenshot of AT](media/at_screenshot.png)
 
 ## Dynamic Bone Constraints
 
@@ -38,4 +42,9 @@ Open the window in `Window > Nara > Dynamic Bone Constraints`.
 Select the objects you want to constrain and click the `From selection` button.
 If you already have a chain of bones you want to bind these objects to, then use that as the `Constraint source root`.
 `Modify source constraint` will modify (and if needed add) children of the root.
-In most cases you can leave the `Constraint source root` empty and just click the magical `Setup constraints` button. [You can have your dynamic bones on your avatar setup in 30 seconds!](https://youtu.be/byvG2FgJEhU)
+In most cases you can leave the `Constraint source root` empty and just click the magical `Setup constraints` button.
+[You can have your dynamic bones on your avatar setup in 30 seconds!](https://youtu.be/byvG2FgJEhU)
+
+## Help Me, I'm Stuck
+
+For small questions you can tag me (Nara#0001) in the official VRChat Discord. Don't try to DM me, they are closed.

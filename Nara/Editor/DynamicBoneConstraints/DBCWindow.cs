@@ -173,9 +173,27 @@ public class DBCWindow : EditorWindow {
 
             if (GUILayout.Button("Remove constraints"))
                 ForEachParentAndSibling(DBCUtils.RemoveConstraints);
+
+            if (GUILayout.Button("Create rotation puppet"))
+                _constrainedObj.ForEach(x => CreateClone(_constraintSource, x));
         });
 
         EditorGUILayout.EndScrollView();
+    }
+
+    void CreateClone(GameObject from, GameObject to) {
+        DBCUtils.CreateConstraints(from, new GameObject[] { to });
+        foreach (var to_child in to.Children()) {
+            var res = from.Children().Where(x => x.name == to_child.name);
+            var count = res.Count();
+            if (count > 1)
+                throw new Exception("Creating rotation clone failed: found duplicate names");
+
+            if (count < 1)
+                Debug.LogWarning($"Could not find bone named {to_child.name}");
+
+            CreateClone(res.First(), to_child);
+        }
     }
 
     void ForEachParentAndSibling(Action<GameObject, List<GameObject>> action) {
