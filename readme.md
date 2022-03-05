@@ -12,21 +12,21 @@ Download or clone this project and copy the `Nara` folder into your `Assets` fol
 
 Gives a small icon in the hierarchy on gameobjects that contain dynamic bones (white/gray) or dynamic bone colliders (blue).
 
-![Screenshot of the hierarchy](media/hierarchy_screenshot.png)
+![Screenshot of the hierarchy](.Media/hierarchy_screenshot.png)
 
 Also adds a few other context menu items.
 Mainly oriented around selecting and setting up dynamic bones.
 You can right click in the hierarchy to quickly select and filter down to dynamic bone components so you can easily edit multiple items.
 Right-clicking a dynamic bone component also allows you to quickly set it's root transform to the component's game object.
 
-![Demo of the right menu contexts](media/context_demo.gif)
+![Demo of the right menu contexts](.Media/context_demo.gif)
 
 ## Animator Tools
 
 Tool that allows the editing of multiple transitions.
 This includes conditions and transition timings. Find  the window in `Window > Nara > Animator Tools`.
 
-![Screenshot of AT](media/at_screenshot.png)
+![Screenshot of AT](.Media/at_screenshot.png)
 
 ## Dynamic Bone Constraints
 
@@ -35,7 +35,7 @@ This includes conditions and transition timings. Find  the window in `Window > N
 Instead of having 50 dynamic bone transformations hogging up the whole main thread it's better to have just a single chain of dynamic bones and have all other bones be move similarly to the single chain.
 This can be done via rotation constraints which are significantly cheaper to compute and they also can be computed on other threads!
 
-![Screenshot of DBC](media/dbc_screenshot.png)
+![Screenshot of DBC](.Media/dbc_screenshot.png)
 
 The tool is pretty simple to use.
 Open the window in `Window > Nara > Dynamic Bone Constraints`.
