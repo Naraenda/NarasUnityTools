@@ -1,6 +1,6 @@
 # Tutorial: (Dynamic) Bone Constraints
 
-## Step 0: Open the DBC window
+## Step 0: Open the Chain Rotation Proxy window
 
 Open the Chain Rotation Proxy tool under the `Window > Nara` (note: this screenshot below outdated) in the toolbar on the top.
 
