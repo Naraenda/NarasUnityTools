@@ -39,23 +39,23 @@ This includes conditions and transition timings. Find the window in `Window > Na
 
 ![Screenshot of AT](.Media/at_screenshot.png)
 
-## Dynamic Bone Constraints
+## Chain Rotation Proxy (formerly Dynamic Bone Constraints)
 
-[**>>> Tutorial <<<**](dbc_tutorial.md)
+[**>>> Tutorial <<<**](crp_tutorial.md)
 
 Instead of having 50 dynamic bone transformations hogging up the whole main thread it's better to have just a single chain of dynamic bones and have all other bones be move similarly to the single chain.
 This can be done via rotation constraints which are significantly cheaper to compute, and they also can be computed on other threads!
 
-![Screenshot of DBC](.Media/dbc_screenshot.png)
+![Screenshot of CRP](.Media/crp_screenshot.png)
 
 The tool is pretty simple to use.
-Open the window in `Window > Nara > Dynamic Bone Constraints`.
+Open the window in `Window > Nara > DChain Rotation Proxy`.
 Select the objects you want to constrain and click the `From selection` button.
 If you already have a chain of bones you want to bind these objects to, then use that as the `Constraint source root`.
 `Modify source constraint` will modify (and if needed add) children of the root.
 In most cases you can leave the `Constraint source root` empty and just click the magical `Setup constraints` button.
-[You can have your dynamic bones on your avatar setup in 30 seconds!](https://youtu.be/byvG2FgJEhU)
+[You can have your PhysBones on your avatar even more optimized in 30 seconds!](https://youtu.be/byvG2FgJEhU)
 
 ## Help Me, I'm Stuck
 
-For small questions you can tag me (Nara#0001) in the official VRChat Discord. Don't try to DM me, they are closed.
+For small questions you can tag me (Nara#0001) in the official VRChat Discord or [join my Discord](https://discord.gg/ysSpNX3HSz).
