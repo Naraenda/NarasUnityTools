@@ -4,9 +4,13 @@
     "displayName": "Nara's Unity Tools",
     "description": "A random collection of Unity Tools",
     "unity": "2019.4",
-    "dependencies": {
+    "optionalDependencies": {
       "com.vrchat.base": "3.0.1",
       "com.vrchat.avatars": "3.0.1"
     },
-    "type": "tool"
+    "keywords": [
+      "utility",
+      "physbone",
+      "tool"
+    ]
   }

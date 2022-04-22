@@ -17,7 +17,7 @@ public class PhysBoneMenuUtils
         }
     }
 
-    [MenuItem("GameObject/PhysBone/Set collisions to selected collider(s)", false, 0)]
+    [MenuItem("GameObject/PhysBone/Set collisions to selected Collider(s)", false, 0)]
     static void SetPBFromSelectedColliders(MenuCommand menuCommand) {
         var sel = Selection.gameObjects;
         var colliders = sel.Select(obj => obj.GetComponent<VRCPhysBoneCollider>() as VRCPhysBoneColliderBase).Where(c => c != null);
@@ -26,7 +26,7 @@ public class PhysBoneMenuUtils
         }
     }
 
-    [MenuItem("CONTEXT/VRCPhysBone/PhysBone/Set collisions to selected collider(s)", false, 0)]
+    [MenuItem("CONTEXT/VRCPhysBone/PhysBone/Set collisions to selected Collider(s)", false, 0)]
     static void SetPBFromSelectedCollidersContext(MenuCommand menuCommand) {
         var sel = Selection.gameObjects;
         var colliders = sel.Select(obj => obj.GetComponent<VRCPhysBoneCollider>() as VRCPhysBoneColliderBase).Where(c => c != null);
@@ -42,7 +42,7 @@ public class PhysBoneMenuUtils
             .ToArray();
     }
 
-    [MenuItem("GameObject/PhysBone/Filter selection to collider(s)", false, 0)]
+    [MenuItem("GameObject/PhysBone/Filter selection to Collider(s)", false, 0)]
     static void FilterPBCFromSelection(MenuCommand menuCommand) {
         Selection.objects = Selection
             .GetFiltered<VRCPhysBoneCollider>(SelectionMode.Unfiltered)
