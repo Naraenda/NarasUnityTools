@@ -1,4 +1,6 @@
-﻿using System;
+﻿#if UNITY_EDITOR
+
+using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
@@ -204,3 +206,4 @@ public class ChainRotationProxy : EditorWindow {
         }
     }
 }
+#endif

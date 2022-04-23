@@ -1,4 +1,4 @@
-using System.Collections;
+#if UNITY_EDITOR
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEditor.Animations;
@@ -467,4 +467,4 @@ public class AnimatorWindow : EditorWindow {
     }
     private GUIStyle AreaStyleNoMargin { get { GUIStyle s = new GUIStyle(EditorStyles.textArea) { margin = new RectOffset(0, 0, 0, 0), }; return s; } }
 }
-
+#endif
