@@ -1,14 +1,11 @@
 {
     "name": "com.naraenda.nut",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "displayName": "Nara's Unity Tools",
-    "description": "A random collection of Unity Tools",
+    "description": "A random collection of Unity Tools for VRChat.",
     "unity": "2019.4",
-    "optionalDependencies": {
-      "com.vrchat.base": "3.0.1",
-      "com.vrchat.avatars": "3.0.1"
-    },
     "keywords": [
+      "vrchat",
       "utility",
       "physbone",
       "tool"

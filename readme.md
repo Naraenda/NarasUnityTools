@@ -9,7 +9,17 @@ Installation of Nara's Unity Tools is done via the Unity Package Manager.
 
 ### OpenUPM Method
 
-_To do!_
+1. In Unity on the top toolbar, go to `Edit > Project Settings > Package Manager`.
+2. Add a new Scoped Registry (or edit the existing OpenUPM entry)
+```txt
+Name        package.openupm.com
+URL         https://package.openupm.com
+Scope(s)    com.naraenda.nut
+```
+3. Click Save (or Apply)
+4. Open `Window > Package Manager`
+5. Next to the `+` icon, select `My Registries`
+6. Select `Nara's Unity Tools` and click install on the bottom right.
 
 ### Git Method
 
