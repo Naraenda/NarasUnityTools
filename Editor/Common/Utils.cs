@@ -2,6 +2,9 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Animations;
+#if UNITY_EDITOR
+using UnityEditor.Animations;
+#endif
 
 namespace Nara
 {
@@ -28,5 +31,17 @@ namespace Nara
 
                 constraint.constraintActive = true;
         }
+
+#if UNITY_EDITOR
+        public static IEnumerable<ChildAnimatorState> AllStates(this AnimatorStateMachine animator) {
+			foreach (var state in animator.states) {
+                yield return state;
+			}
+
+            foreach (var state in animator.stateMachines.SelectMany(sm => sm.stateMachine.AllStates())) {
+                yield return state;
+            }
+		}
+#endif
     }
 }

@@ -400,8 +400,16 @@ public class AnimatorWindow : EditorWindow {
         foreach (var layer in _animatorController.layers) {
             _anyStateTransitions.AddRange(layer.stateMachine.anyStateTransitions);
             _entryStateTransitions.AddRange(layer.stateMachine.entryTransitions);
-            foreach (var state in layer.stateMachine.states) 
-            {
+
+            /*
+            foreach (var state in layer.stateMachine.states) {
+                _stateNodes.Add(state.state, state.position);
+                foreach (var transition in state.state.transitions) {
+                    _stateTransitions.Add(transition, state.state);
+                }
+            } */
+
+			foreach (var state in layer.stateMachine.AllStates()) {
                 _stateNodes.Add(state.state, state.position);
                 foreach (var transition in state.state.transitions) {
                     _stateTransitions.Add(transition, state.state);
