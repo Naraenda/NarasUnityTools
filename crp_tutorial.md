@@ -4,31 +4,31 @@
 
 Open the Chain Rotation Proxy tool under the `Window > Nara` (note: this screenshot below outdated) in the toolbar on the top.
 
-![Open the Chain Rotation Proxy window under "Nara" in the top toolbar.](.Media/dbc_tutorial/open_dbc.png)
+![Open the Chain Rotation Proxy window under "Nara" in the top toolbar.](.Media/crp_tutorial/open_dbc.png)
 
 ## Step 1: Select bones
 
 Select the bones you want to be affected.
 
-![Select objects in hierarchy](.Media/dbc_tutorial/selection_hierarchy.png)
+![Select objects in hierarchy](.Media/crp_tutorial/selection_hierarchy.png)
 
 Then in the Chain Rotation Proxy window click `From selection`.
 If you want to waste time, you can drag them in one by one.
 
-![Click the 'from selection' button](.Media/dbc_tutorial/from_selection.gif)
+![Click the 'from selection' button](.Media/crp_tutorial/from_selection.gif)
 
 ## Step 2: Setting up constraints
 
 If `Constraint source root` is empty and `Modify source` is checked, clicking the `Setup constraints` button will generate a new chain of objects under the first element's parent.
 It will also set up constraints on all the selected objects and their children.
 
-![Click the 'setup constraints' button](.Media/dbc_tutorial/setup_constraints.gif)
+![Click the 'setup constraints' button](.Media/crp_tutorial/setup_constraints.gif)
 
 ## Step 3: Adding PhysBones
 
 Now you can add PhysBones to the generated object and enjoy a better performing avatar!
 
-![PhysBones are cool](.Media/dbc_tutorial/dynamic_bones.gif)
+![PhysBones are cool](.Media/crp_tutorial/dynamic_bones.gif)
 
 ## Extra: Using existing sources
 
