@@ -64,7 +64,11 @@ Select the objects you want to constrain and click the `From selection` button.
 If you already have a chain of bones you want to bind these objects to, then use that as the `Constraint source root`.
 `Modify source constraint` will modify (and if needed add) children of the root.
 In most cases you can leave the `Constraint source root` empty and just click the magical `Setup constraints` button.
-[You can have your PhysBones on your avatar even more optimized in 30 seconds!](https://youtu.be/byvG2FgJEhU)
+
+### You can have your PhysBones on your avatar even more optimized in 30 seconds!
+
+https://github.com/CuteWaterBeary/FizzHierarchyPerformance/assets/103973703/132f035e-1743-48e4-bbcc-0ec49adfde4d
+
 
 ## Help Me, I'm Stuck
 
