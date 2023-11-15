@@ -1,5 +1,20 @@
 # Nara's Unity Tools (NUT)
 
+> [!CAUTION]
+>
+> This package is no longer maintained and thus archived.
+> A lot of the features are superseded by other tools and I don't have the time to add new things.
+> Thank you all who used Nara's Unity Tools! :heart:
+>
+> If you're looking for something similar, check out these alternatives:
+>
+> - PhysBones deprecated the use of the rotation constraint hack.
+>   The performance of constraints also [does not scale well](https://notes.sleightly.dev/benchmarks/).
+> - Animator Tools can be replaced by [Dreadrith's Controller Editor](https://www.dreadrith.com/l/CEditor)
+> - Hierarchy Improvements can be replaced by [Drearith's Selection Helper](https://github.com/Dreadrith/SelectionHelper)
+
+---
+
 Place for some of the tools I wrote for Unity.
 Specifically for the creation of avatars for VRChat.
 
